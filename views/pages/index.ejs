@@ -1,0 +1,130 @@
+<% layout("./layouts/boilerplate") %>
+<body>
+  <div class="index-page">
+    <ul class="rightside">
+      <% categories.forEach((category) => { %>
+      <li class="col-3">
+        <% if (category === "") { %>
+        <a href="/categories/<%= category %>">
+          <i class="fa-solid fa-user-ninja" style="color: #b197fc"></i>
+          Unnamed
+        </a>
+        <% } else { %>
+        <a href="/categories/<%= category %>">
+          <% if (category === "2 Player") { %>
+          <i class="fa-solid fa-user-ninja" style="color: #ffffff"></i>
+          <% } else if (category === "Adventure") { %>
+          <i class="fa-solid fa-binoculars" style="color: #b197fc"></i>
+          <% } else if (category === "Arcade") { %>
+          <i class="fa-brands fa-draft2digital" style="color: #b197fc"></i>
+          <% } else if (category === "Action") { %>
+          <i class="fa-solid fa-cube" style="color: #b197fc"></i>
+          <% } else if (category === "3D") { %>
+          <i class="fa-solid fa-location-crosshairs" style="color: #b197fc"></i>
+          <% } else if (category === "Bejeweled") { %>
+          <i class="fa-brands fa-space-awesome" style="color: #b197fc"></i>
+          <% } else if (category === "Clicker") { %>
+          <i class="fa-solid fa-computer-mouse"></i>
+          <% } else if (category === "Boys") { %>
+          <i class="fa-solid fa-gem" style="color: #b197fc"></i>
+          <% } else if (category === "Girls") { %>
+          <i class="fa-solid fa-child-reaching" style="color: #b197fc"></i>
+          <% } else if (category === "Cooking") { %>
+          <i class="fa-solid fa-bowl-food"></i>
+          <% } else if (category === "Soccer") { %>
+          <i class="fa-regular fa-futbol"></i>
+          <% } else if (category === "Multiplayer") { %>
+          <i class="fa-thin fa-child-reaching" style="color: #b197fc"></i>
+          <% } else if (category === "Puzzle") { %>
+          <i class="fa-solid fa-mask" style="color: #b197fc"></i>
+          <% } else if (category === "Racing") { %>
+          <i class="fa-solid fa-flag-checkered"></i>
+          <% } else if (category === "Shooting") { %>
+          <i class="fa-solid fa-puzzle-piece" style="color: #b197fc"></i>
+          <% } else if (category === "Sports") { %>
+          <i class="fa-solid fa-flag-checkered" style="color: #b197fc"></i>
+          <% } else if (category === "Stickman") { %>
+          <i class="fa-solid fa-gun" style="color: #b197fc"></i>
+          <% } else if (category === "Action") { %>
+          <i class="fa-solid fa-futbol" style="color: #b197fc"></i>
+          <% } else if (category === "Volleyball") { %>
+          <i class="fa-solid fa-volleyball" style="color: #b197fc"></i>
+          <% } else if (category === "Hypercasual") { %>
+          <i class="fa-solid fa-mask"></i>
+          <% } else { %> <%= category %> <% } %> <%= category %>
+        </a>
+        <% } %>
+        <!-- Add favicon for each category here -->
+      </li>
+      <% }); %>
+    </ul>
+  </div>
+  <div class="first-section">
+    <div class="more-games">
+      <% first_section.forEach((game) => { %>
+      <span class="game-thumb">
+        <a href="/<%= encodeURIComponent(game.url) %>" alt="Game ThumbNail">
+          <img
+            src="<%= game.thumb %>"
+            alt="Game ThumbNail"
+            style="
+              width: 128px;
+              aspect-ratio: 4/3 auto;
+              margin-top: 10px;
+              margin-left: 10px;
+            "
+          />
+          <div class="game-title"><%= game.title %></div>
+        </a>
+      </span>
+
+      <% }); %>
+    </div>
+  </div>
+  <div class="second-add"></div>
+  <div class="second-section">
+    <div class="more-games">
+      <% second_section.forEach((game) => { %>
+      <span class="game-thumb">
+        <a href="/<%= encodeURIComponent(game.url) %>" alt="Game ThumbNail">
+          <img
+            src="<%= game.thumb %>"
+            alt="Game ThumbNail"
+            style="
+              width: 128px;
+              aspect-ratio: 4/3 auto;
+              margin-top: 10px;
+              margin-left: 10px;
+            "
+          />
+          <div class="game-title"><%= game.title %></div>
+        </a>
+      </span>
+
+      <% }); %>
+    </div>
+  </div>
+  <div class="second-section">
+    <div class="more-games">
+      <% third_section.forEach((game) => { %>
+      <span class="game-thumb">
+        <a href="/<%= encodeURIComponent(game.url) %>" alt="Game ThumbNail">
+          <img
+            src="<%= game.thumb %>"
+            alt="Game ThumbNail"
+            style="
+              width: 128px;
+              aspect-ratio: 4/3 auto;
+              margin-top: 10px;
+              margin-left: 10px;
+            "
+          />
+          <div class="game-title"><%= game.title %></div>
+        </a>
+      </span>
+
+      <% }); %>
+    </div>
+  </div>
+  <div class="third-add"></div>
+</body>

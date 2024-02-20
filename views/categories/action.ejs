@@ -1,0 +1,24 @@
+<% layout("./layouts/boilercat") %>
+<body>
+  <div class="main-card">
+    <% Data.forEach((game, index) => { %>
+      <% if (game.category === "Action") { %>
+        <div class="game-card<%= (index % 6 === 0) ? ' row-1' : '' %>">
+          <span class="game-thumb">
+          <a href="/<%= encodeURIComponent(game.url) %>" alt="Game ThumbNail">
+            <img
+              src="<%= game.thumb %>"
+              alt="Game ThumbNail"
+              
+            />
+            <div class="game-title"><%= game.title %></div>
+          </a>
+        </span>
+        </div>
+        <% if ((index + 1) % 28 === 0) { %>
+          <div class="extra-div"></div>
+        <% } %>
+      <% } %>
+    <% }); %>
+  </div>
+</body>

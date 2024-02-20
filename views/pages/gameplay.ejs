@@ -1,0 +1,100 @@
+<% layout("./layouts/boilergame") %>
+
+<body class="gameplay-body">
+  <div class="main-section">
+    <div class="game-related">
+      <div class="left-side-games">
+        <% left_side.forEach((game) => { %>
+        <span class="game-thumb">
+          <a href="/<%= encodeURIComponent(game.url) %>" alt="Game ThumbNail">
+            <img
+              src="<%= game.thumb %>"
+              alt="Game ThumbNail"
+              style="width: 7em; aspect-ratio: 4/3 auto"
+            />
+            <div class="game-title"><%= game.title %></div>
+          </a>
+        </span>
+        <% }); %>
+      </div>
+      <div class="game-play-area">
+          <iframe
+            class="game"
+            src="<%= gameData.url %>"
+            style="aspect-ratio:auto; width: 780px ; height: 585px; scrollbar-width: none !important;"
+
+            frameborder="0"
+          ></iframe>
+      </div>
+      <div class="right-side-games">
+        <% last_section.forEach((game) => { %>
+        <span class="game-thumb">
+          <a href="/<%= encodeURIComponent(game.url) %>" alt="Game ThumbNail">
+            <img
+              src="<%= game.thumb %>"
+              alt="Game ThumbNail"
+              style="width: 7em; aspect-ratio: 4/3 auto"
+            />
+            <div class="game-title"><%= game.title %></div>
+          </a>
+        </span>
+
+        <% }); %>
+      </div>
+    </div>
+    <div class="side-bar-ad2"></div>
+
+    <div class="game-detail">
+      <div class="gameThumbDiv">
+        <span class="game-thumb">
+          <img
+            src="<%= gameData.thumb %>"
+            alt="Game ThumbNail"
+            style="width: 100px; height: 90px"
+          />
+        </span>
+      </div>
+      <div class="gameTitleDiv">
+        <span class="game-title"
+          ><p><b> Title: </b> <%= gameData.title %></p></span
+        >
+
+        <span class="game-instructions"
+          ><p><b> INSTRUCTIONS: </b> <%= gameData.instructions %></p></span
+        >
+      </div>
+    </div>
+  </div>
+  <br /><br /><br /><br /><br /><br /><br /><br />
+  <div class="more-games">
+    <% mid_section.forEach((game) => { %>
+    <span class="game-thumb">
+      <a href="/<%= encodeURIComponent(game.url) %>" alt="Game ThumbNail">
+        <img
+          src="<%= game.thumb %>"
+          alt="Game ThumbNail"
+          style="width: 8.65em; aspect-ratio: 4/3 auto"
+        />
+        <div class="game-title"><%= game.title %></div>
+      </a>
+    </span>
+
+    <% }); %>
+  </div>
+  <div class="more-add"></div>
+  <div class="more-games-last">
+    <% last_section.forEach((game) => { %>
+    <span class="game-thumb">
+      <a href="/<%= encodeURIComponent(game.url) %>" alt="Game ThumbNail">
+        <img
+          src="<%= game.thumb %>"
+          alt="Game ThumbNail"
+          style="width: 8.65em; aspect-ratio: 4/3 auto"
+        />
+        <div class="game-title"><%= game.title %></div>
+      </a>
+    </span>
+    <% }); %>
+  </div>
+  <div class="more-add"></div>
+</body>

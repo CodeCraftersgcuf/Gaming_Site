@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none !important;
+}
+body {
+  position: relative;
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100vh !important;
+  background-image: repeating-conic-gradient(blue 20%, purple 40%) !important;
+  color: #ffc300;
+    overflow-y: scroll;
+    backdrop-filter: blur(7px);
+  overflow-y: scroll;
+  overflow-x: auto;
+}
+.col-3 {
+  width: auto !important;
+}
+.index-page {
+  position: absolute;
+  top: 70px;
+  background-color: rgba(3, 5, 94, 0.755);
+  box-shadow: inset 0 0 15px 4px rgba(0, 1, 62, 0.604);
+  border: none;
+  border-radius: 0 30px 30px 0;
+  left: 0;
+  backdrop-filter: blur(12px);
+}
+li {
+  padding: 5px;
+  margin-top: 10px !important;
+}
+li i:nth-child(n) {
+  padding-right: 15px;
+  margin-left: -20px;
+  border-radius: 20px;
+}
+li a {
+  background-color: rgb(0, 1, 43);
+  font-family: inherit !important;
+  font-size: 18px;
+  color: #ffcf31;
+  line-height: 25px;
+  vertical-align: bottom !important;
+  padding: 6px;
+  padding-left: 30px;
+  padding-right: 10px;
+
+  border-radius: 20px;
+}
+li a:hover {
+  background-color: #1b1ee1;
+  color: #e2ad00;
+  box-shadow: 3px 3px 10px 4px rgba(0, 1, 43, 0.669) !important;
+  transition: all 0.1s ease-in;
+}
+.rightside {
+  list-style: none;
+  margin-right: 0px;
+  margin-top: 22px;
+  margin-left: -30px;
+}
+.container {
+  max-width: 1180px !important;
+}
+.more-games {
+  margin: 0px 0 10px 0px !important;
+}
+
+.first-section,
+.second-section {
+  position: absolute;
+  top: 10px;
+  left: 80px;
+  height: 565px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 20px 8px 8px 20px;
+}
+.second-add,
+.third-add {
+  margin-top: 2%;
+  border: 2px solid black;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 250px;
+  margin-bottom: 2%;
+}
+a img {
+  border-radius: 12px;
+  box-shadow: 3px 3px 4px 1px rgb(0 1 43 / 85%) !important;
+  padding: 0.001em;
+}
+a img:hover {
+  transform: translate(0px, -8px);
+  transition: all 0.1s ease-in-out;
+
+  box-shadow: 3px 13px 4px 0px rgb(59 181 179 / 95%) !important;
+}
+.game-thumb:active,
+.game-thumb img.clicked {
+   transform: scale(0.90);
+  transition: all 0.1s ease-in-out;
+  filter: grayscale(0.5);
+
+}
+
+body::-webkit-scrollbar,
+.second-section::-webkit-scrollbar,
+.first-section::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-button,
+.second-section::-webkit-scrollbar-button,
+.first-section::-webkit-scrollbar-button {
+  display: none;
+}
+
+body::-webkit-scrollbar-thumb,
+.second-section::-webkit-scrollbar-thumb,
+.first-section::-webkit-scrollbar-thumb {
+  background: #ffcf31;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb:hover,
+.second-section::-webkit-scrollbar-thumb:hover,
+.first-section::-webkit-scrollbar-thumb:hover {
+  background: #e2ad00;
+}
+
+body::-webkit-scrollbar-track,
+.second-section::-webkit-scrollbar-track,
+.first-section::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-track-piece,
+.second-section::-webkit-scrollbar-track-piece,
+.first-section::-webkit-scrollbar-track-piece {
+  background: blueviolet !important ;
+  border-radius: 10px;
+}
+
+/* Parent span element */
+.game-thumb {
+  position: relative; /* Set to relative positioning */
+  display: inline-block; /* Ensure it takes up only as much space as needed */
+}
+
+/* Title of the game */
+.game-thumb a .game-title {
+  position: absolute; /* Set to absolute positioning */
+  text-align: center; /* Set to center positioning */
+  background-color: transparent; /* Semi-transparent black background */
+  color: #fffb00; /* White text color */
+  padding: 5px; /* Padding around the text */
+  visibility: hidden; /* Initially hidden */
+  pointer-events: none; /* Ignore pointer events to allow clicking through the title */
+  /* transition: visibility 0.1s ease-in-out all; Smooth transition when showing/hiding */
+}
+
+/* Show the title on hover */
+.game-thumb:hover a .game-title {
+  text-align: center;
+  transition: ease-in-out all;
+  /* background: rgba(9, 11, 138, 0.694); */
+  border-bottom: 2px solid rgb(0, 136, 255);
+  box-shadow: 0px -3px 3px -2px rgba(0, 0, 0, 0.2),
+  0px -3px 4px 0px rgba(0, 0, 0, 0.14), 0px -1px 8px 0px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(4px);
+  visibility: visible; /* Show the title */
+  z-index: 100;
+  bottom: -5px;
+  left: 10px;
+  width: 93.1%;
+border-radius: 0 0 16px 16px;
+  line-height: 110%;
+  background-image: linear-gradient(rgba(0, 2, 111, 0.364),rgb(9, 11, 138));
+  text-shadow:  -1px -1px 3px rgb(0 0 0 / 99%);
+}
