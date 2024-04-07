@@ -9,7 +9,8 @@ const ejsMate = require("ejs-mate");
 const { gameData, getAllGameData } = require("./models/getRandomGames.js");
 const bodyParser = require("body-parser");
 const { gameHomeData, getHomeGameData } = require("./models/getHomeGames.js");
-const dbUrl = process.env.ATLASDB_URL;
+const dbUrl =
+  "mongodb+srv://masbusiness04:wFaGPiaaGmkYRkb2@cluster0.e6l9fjw.mongodb.net/gamingDb?retryWrites=true&w=majority";
 
 // mongoose.connect("mongodb://127.0.0.1:27017/gamingDb", {
 //   useNewUrlParser: true,
